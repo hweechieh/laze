@@ -1,0 +1,14 @@
+
+
+.container {
+    background-color: #6f6a5f;
+    width: 100%;
+    height: auto;
+}
+
+
+.title {
+    font-family: avenir, sans-serif;
+    font-size: 50px;
+    color: white;
+}
