@@ -18,7 +18,7 @@ class NavBar extends React.Component {
                       <button type="submit"><i className="search"></i></button>
                       <a href="/recent">recent</a> |
                       <a href="/login">log in</a> |
-                      <a href="/sign-up/">sign up</a>
+                      <a href="/signup">sign up</a>
                     </nav>
                 </body>
 

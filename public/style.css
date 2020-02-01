@@ -1,7 +1,21 @@
 
 
+.landing-container {
+    background-color: #6f6a5f;
+    width: 100%;
+    height: auto;
+}
+
+
 .container {
     background-color: #6f6a5f;
+    width: 100%;
+    height: auto;
+}
+
+
+.recent-container {
+    background-color: orange;
     width: 100%;
     height: auto;
 }
@@ -11,4 +25,9 @@
     font-family: avenir, sans-serif;
     font-size: 50px;
     color: white;
+}
+
+
+h2 {
+    color: black;
 }

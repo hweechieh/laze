@@ -1,4 +1,4 @@
-module.exports = (signUpInputInstance) => {
+module.exports = (dbPoolInputInstance) => {
 
   // `dbPoolInstance` is accessible within this function scope
 
@@ -7,7 +7,7 @@ module.exports = (signUpInputInstance) => {
     let query = ('INSERT INTO users (username, password) VALUES ($1, $2) RETURNING *');
     // console.log(query + "yeeeeeeeeh");
 
-    signUpInputInstance.query(query, values, (error, queryResult) => {
+    dbPoolInputInstance.query(query, values, (error, queryResult) => {
       if( error ){
 
         // invoke callback function with results after query has executed
@@ -30,9 +30,36 @@ module.exports = (signUpInputInstance) => {
   };
 
 
+  let logIn = (values, callback) => {
+
+    let query = ('SELECT * FROM users WHERE username=$1 AND password=$2');
 
 
-  return {
-    signUp: signUp
+    dbPoolInputInstance.query(query, values, (error, queryResult) => {
+      if( error ){
+
+        // invoke callback function with results after query has executed
+        callback(error, null);
+        console.log(error);
+
+      }else{
+
+        // invoke callback function with results after query has executed
+
+        if( queryResult.rows.length > 0 ){
+          callback(null, queryResult.rows);
+
+        }else{
+          callback(null, null);
+
+        }
+      }
+    });
   };
+
+    return {
+    signUp: signUp,
+    logIn: logIn
+}
 };
+

@@ -14,7 +14,7 @@ class Landing extends React.Component {
                 </head>
 
                 <body>
-                <div className="container">
+                <div className="landing-container">
                 <NavBar/>
                   <div className="title"><h1>laze around</h1>
                   <p>The world can get a little too loud sometimes;

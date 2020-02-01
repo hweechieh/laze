@@ -15,7 +15,7 @@ class Greeting extends React.Component {
                 <body>
                 <div className="container">
                     <NavBar/>
-                    <div className="greeting"><h1>Hello,</h1>{this.props.name}!</div>
+                    <div className="greeting"><h1>Hey. nice to have you back!</h1></div>
 
                     <nav>
                         <a href="/recent">my favorites</a> |
