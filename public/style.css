@@ -1,33 +1,74 @@
 
 
-.landing-container {
-    background-color: #6f6a5f;
-    width: 100%;
-    height: auto;
+html {
+  background: url("./images/bg copy.jpg")
+  no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
+.logo {
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 46px;
+    color: #aca4ba;
 
-.container {
-    background-color: #6f6a5f;
-    width: 100%;
-    height: auto;
+    display: inline-flex;
+    float: left;
+    padding-top: 14px;
+    padding-left: 30px;
 }
-
-
-.recent-container {
-    background-color: orange;
-    width: 100%;
-    height: auto;
-}
-
 
 .title {
-    font-family: avenir, sans-serif;
-    font-size: 50px;
-    color: white;
+    font-family: montserrat, sans-serif;
+    font-size: 36px;
+    font-weight: bolder;
+    color: #aca4ba;
+    text-align: center;
+    padding-top: 250px;
 }
 
+.signup-btn {
+    position: center;
+}
+
+.log-in {
+    font-family: eb-garamond, serif;
+    text-transform: lowercase;
+    font-size: 30px;
+    color: #aca4ba;
+    text-align: center;
+    padding-top: 200px;
+}
+
+.greeting {
+    font-family: montserrat, sans-serif;
+    font-size: 50px;
+    color: #5a5773;
+    padding-top: 100px;
+    padding-left: 30px;
+}
+
+
+a {
+    font-family: montserrat, sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #837e93;
+    float: right;
+    padding: 20px;
+}
+
+a:hover {
+    font-weight: bold;
+}
 
 h2 {
     color: black;
+}
+
+.button {
+    width: 100px;
+    height: auto;
 }

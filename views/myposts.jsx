@@ -1,7 +1,7 @@
 var React = require('react');
 var NavBar = require('./navbar');
 
-class Greeting extends React.Component {
+class MyPosts extends React.Component {
     render() {
         // console.log('rendering');
 
@@ -15,13 +15,14 @@ class Greeting extends React.Component {
                 <body>
                 <div className="container">
                     <NavBar/>
-                    <div className="greeting">Hey! Nice to have you back!</div>
+                    <div className="greeting"><h1>My Posts</h1></div>
 
                     <nav>
                         <a href="/favorites">my favorites</a>
                         <a href="/posts">posts</a>
                         <a href="/newpost">create new posts</a>
                     </nav>
+
                     <script src="/newpost.js"></script>
 
                 </div>
@@ -32,4 +33,4 @@ class Greeting extends React.Component {
     }
 }
 
-module.exports = Greeting;
+module.exports = MyPosts;

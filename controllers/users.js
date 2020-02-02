@@ -24,13 +24,7 @@ module.exports = (db) => {
         let passwordInput = sha256(request.body.password + SALT);
         const values = [nameInput, passwordInput];
 
-        const callback = (error, users) => {
-                const data = {
-                signedInUser : users
-            }
-        };
-
-        db.users.signUp(values, data, (error, users) => {
+        db.users.signUp(values, (error, users) => {
 
             if (nameInput === null || passwordInput === null) {
                 response.send("INCOMPLETE INPUTS, TRY AGAIN!!!")

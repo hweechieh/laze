@@ -1,5 +1,8 @@
 
 var button = document.createElement("button");
+button.setAttribute("id", "signup-btn");
+// document.getElementById("signup-btn").style.color="green";
+
 button.innerText = "Enjoy Laze Free!";
 document.body.appendChild(button);
 

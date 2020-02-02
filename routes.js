@@ -23,14 +23,18 @@ module.exports = (app, allModels) => {
 
     const recentPageControllerCallbacks = require('./controllers/videos')(allModels);
 
+    const createNewControllerCallbacks = require('./controllers/posts')(allModels);
+
 
     app.get('/', indexControllerCallbacks.index)
     app.post('/hello', signUpControllerCallbacks.signUp)
 
     app.get('/login', logInPageControllerCallbacks.logInPage)
-    app.post('/welcomeback', logInControllerCallbacks.logIn)
+    app.post('/welcomeback/:id', logInControllerCallbacks.logIn)
 
     app.get('/signup', signUpPageControllerCallbacks.signUpPage)
 
     app.get('/recent', recentPageControllerCallbacks.recentPage)
+
+    app.post('/myposts', createNewControllerCallbacks.createNew)
 };

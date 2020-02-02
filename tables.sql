@@ -25,6 +25,7 @@ CREATE TABLE IF NOT EXISTS songs (
 CREATE TABLE IF NOT EXISTS posts (
   id SERIAL PRIMARY KEY,
   user_id INT,
+  title TEXT,
   post TEXT
 );
 

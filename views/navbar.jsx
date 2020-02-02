@@ -9,16 +9,16 @@ class NavBar extends React.Component {
                 <html>
                 <head>
                   <title>laze</title>
+                  <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great&display=swap" rel="stylesheet"></link>
                   <link rel="stylesheet" href="/style.css"></link>
                 </head>
 
                 <body>
                     <nav>
-                      <input type="text" placeholder="Search"></input>
-                      <button type="submit"><i className="search"></i></button>
-                      <a href="/recent">recent</a> |
-                      <a href="/login">log in</a> |
+                      <div className="logo">laze</div>
+                      <a href="/login">log in</a>
                       <a href="/signup">sign up</a>
+                      <a href="/recent">recent</a>
                     </nav>
                 </body>
 

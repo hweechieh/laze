@@ -69,7 +69,8 @@ const usersModelsObject = allUsersModelsFunction(pool);
 const allVideosModelsFunction = require('./models/videos');
 const videosModelsObject = allVideosModelsFunction(pool);
 
-
+const allPostsModelsFunction = require('./models/posts');
+const postsModelsObject = allPostsModelsFunction(pool);
 
 
 
@@ -101,6 +102,7 @@ module.exports = {
      */
 
     users: usersModelsObject,
-    videos: videosModelsObject
+    videos: videosModelsObject,
+    posts: postsModelsObject
 
 };

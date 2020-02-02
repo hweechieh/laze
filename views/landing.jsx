@@ -16,11 +16,9 @@ class Landing extends React.Component {
                 <body>
                 <div className="landing-container">
                 <NavBar/>
-                  <div className="title"><h1>laze around</h1>
-                  <p>The world can get a little too loud sometimes;
-                  let’s find some quiet together.</p>
-                  <script src="/script.js"></script>
+                  <div className="title"><p>Peace for everyone.</p>
                   </div>
+                <script src="/signup.js"></script>
                 </div>
                 </body>
               </html>

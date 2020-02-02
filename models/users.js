@@ -5,7 +5,6 @@ module.exports = (dbPoolInputInstance) => {
   let signUp = (values, callback) => {
 
     let query = ('INSERT INTO users (username, password) VALUES ($1, $2) RETURNING *');
-    // console.log(query + "yeeeeeeeeh");
 
     dbPoolInputInstance.query(query, values, (error, queryResult) => {
       if( error ){
@@ -58,8 +57,8 @@ module.exports = (dbPoolInputInstance) => {
   };
 
     return {
-    signUp: signUp,
-    logIn: logIn
-}
+        signUp: signUp,
+        logIn: logIn
+    }
 };
 
