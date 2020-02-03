@@ -43,7 +43,7 @@ class Recent extends React.Component {
                 <body>
                 <div className="recent-container">
                 <NavBar/>
-                  <div className="title"><h1>Recent</h1></div>
+                  <div className="recent-title">Recent</div>
                 </div>
                     {something}
                 </body>

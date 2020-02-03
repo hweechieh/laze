@@ -20,6 +20,8 @@ module.exports = (db) => {
 
 
     let signUpControllerCallback = (request, response) => {
+
+        let userId = sha256(request.params.id);
         let nameInput = request.body.username;
         let passwordInput = sha256(request.body.password + SALT);
         const values = [nameInput, passwordInput];
@@ -35,7 +37,8 @@ module.exports = (db) => {
             }
 
             else {
-            response.cookie('loggedin', true);
+            let currentSessionCookie = sha256(users.id + 'logged' + SALT);
+            response.cookie('user_id', users[0].id);
             response.render('hello', data);
 
             }
@@ -69,11 +72,12 @@ module.exports = (db) => {
 
             if (users === null) {
                 response.send("Incorrect username or password. Try again!")
-                console.log(users);
+                // console.log(users);
             }
 
             else {
             let currentSessionCookie = sha256(users.id + 'logged' + SALT);
+            response.cookie('user_id', users[0].id);
             response.cookie('logged in', currentSessionCookie);
             response.render('welcomeback');
             }
@@ -81,9 +85,6 @@ module.exports = (db) => {
     };
 
 
-    // let signUpConfirmationControllerCallback = (request, response) => {
-
-    // };
 
     /**
      * ===========================================

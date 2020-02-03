@@ -16,7 +16,7 @@ class SignUp extends React.Component {
                 <body>
                 <div className="container">
                 <NavBar/>
-                  <div className="title"><h1>Sign Up</h1><br></br>
+                  <div><h1 className="title">Sign Up</h1><br></br>
                   <form action="/hello" method="POST">
                     Username: <input type="text" name="username" placeholder="Username"></input><br></br>
                     Password: <input type="text" name="password" placeholder="Password"></input><br></br>

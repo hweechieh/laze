@@ -29,12 +29,8 @@ html {
     padding-top: 250px;
 }
 
-.signup-btn {
-    position: center;
-}
-
 .log-in {
-    font-family: eb-garamond, serif;
+    font-family: 'Fredericka the Great', cursive;
     text-transform: lowercase;
     font-size: 30px;
     color: #aca4ba;
@@ -44,12 +40,28 @@ html {
 
 .greeting {
     font-family: montserrat, sans-serif;
-    font-size: 50px;
+    font-size: 40px;
     color: #5a5773;
+    text-align: center;
     padding-top: 100px;
     padding-left: 30px;
 }
 
+.myposts-title {
+    font-family: montserrat, sans-serif;
+    font-size: 30px;
+    color: #5a5773;
+    padding-top: 80px;
+    text-align: center;
+}
+
+.recent-title {
+    font-family: montserrat, sans-serif;
+    font-size: 30px;
+    color: #5a5773;
+    padding-top: 80px;
+    text-align: center;
+}
 
 a {
     font-family: montserrat, sans-serif;
@@ -64,11 +76,25 @@ a:hover {
     font-weight: bold;
 }
 
-h2 {
-    color: black;
+.post-container {
+    width: 400px;
+    margin: 0 auto;
 }
 
-.button {
-    width: 100px;
-    height: auto;
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.col {
+    display: flex;
+    flex-direction: col;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+.col-inner {
+    text-align: center;
 }

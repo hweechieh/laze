@@ -1,15 +1,19 @@
 
-var button = document.createElement("button");
-button.setAttribute("id", "signup-btn");
-// document.getElementById("signup-btn").style.color="green";
+var buttonDiv = document.createElement("div");
+buttonDiv.setAttribute("style", "display: flex; margin: auto");
 
-button.innerText = "Enjoy Laze Free!";
-document.body.appendChild(button);
+var button = document.createElement("img");
+button.src = "./images/enjoyfree-btn";
+button.setAttribute("height", "auto");
+button.setAttribute("width", "200px");
+button.setAttribute("style", "padding-left: 600px")
+buttonDiv.appendChild(button);
+document.body.appendChild(buttonDiv);
 
 //event.target.value
 //if element is an input, use the above to access the input
 
-button.addEventListener('click', function(event) {
+buttonDiv.addEventListener('click', function(event) {
     var request = new XMLHttpRequest();
 
     // what to do when we recieve the request
@@ -18,7 +22,7 @@ button.addEventListener('click', function(event) {
         // console.log("status text", this.statusText);
         // console.log("status code", this.status);
 
-    document.body.removeChild(button);
+    document.body.removeChild(buttonDiv);
 
     var form = document.createElement("form");
     form.setAttribute("action", "/hello");

@@ -3,8 +3,14 @@ var NavBar = require('./navbar');
 
 class MyPosts extends React.Component {
     render() {
-        // console.log('rendering');
-
+        const allPosts = this.props.myPosts.map((post) => {
+            return (
+                <div className="row">
+                    <div className="col"><div>{post.title}</div></div>
+                    <div className ="col"><div>{post.post}</div></div>
+                </div>
+            )
+        })
         return (
             <html>
                 <head>
@@ -13,18 +19,15 @@ class MyPosts extends React.Component {
                 </head>
 
                 <body>
-                <div className="container">
                     <NavBar/>
-                    <div className="greeting"><h1>My Posts</h1></div>
-
-                    <nav>
-                        <a href="/favorites">my favorites</a>
-                        <a href="/posts">posts</a>
-                        <a href="/newpost">create new posts</a>
-                    </nav>
-
-                    <script src="/newpost.js"></script>
-
+                    <div className="myposts-title"><h1>My Posts</h1></div>
+                    <script src="/script.js"></script>
+                <div className="post-container">
+                <div className="row">
+                    <div className="col"><div className="col-inner">Post Title</div></div>
+                    <div className="col"><div className="col-inner">Post</div></div>
+                </div>
+                {allPosts}
                 </div>
 
                 </body>
