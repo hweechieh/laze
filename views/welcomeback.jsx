@@ -1,5 +1,6 @@
 var React = require('react');
 var NavBar = require('./navbar');
+var Buttons = require('./buttons')
 
 class Greeting extends React.Component {
     render() {
@@ -17,7 +18,7 @@ class Greeting extends React.Component {
                     <NavBar/>
                     <div className="greeting">Hey {this.props.loggedInUser[0].username}! Nice to have you back!</div>
                 <br></br>
-                    <script src="/script.js"></script>
+                    <Buttons/>
                 </div>
 
                 </body>

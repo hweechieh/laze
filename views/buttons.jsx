@@ -3,6 +3,7 @@ var React = require('react');
 class Buttons extends React.Component {
 
     render() {
+
         return (
             <html>
                 <head>
@@ -11,10 +12,10 @@ class Buttons extends React.Component {
                 </head>
 
                 <body>
-                <div class="btns-container">
-                    <a href="/favorites"><img class="three-btns" src="./images/faves-btn.png" /></a>
-                    <a href="/myposts"><img class="three-btns" src="./images/viewallpost-btn.png" /></a>
-                    <a href="/createnew"><img class="three-btns" src="./images/newpost-btn.png" /></a>
+                <div className="btns-container">
+                    <a href="/favorites"><img className="three-btns" src="./images/faves-btn.png" /></a>
+                    <a href="/myposts"><img className="three-btns" src="./images/viewallpost-btn.png" /></a>
+                    <a href="/createnew"><img className="three-btns" src="./images/newpost-btn.png" /></a>
                 </div>
                 </body>
               </html>

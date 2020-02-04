@@ -15,9 +15,8 @@ module.exports = (db) => {
                 myPosts : posts
             }
 
-            response.redirect('/myposts');
+            response.render('createnew', data);
     }
-        // db.posts.createNew(callback)
         db.posts.createNew(callback, userId, titleInput, postInput);
 };
 
@@ -26,10 +25,11 @@ module.exports = (db) => {
         let userId = request.cookies.user_id;
 
         const callback = (error, posts) => {
+
             const data = {
                 myPosts : posts
             }
-            console.log(data);
+
             response.render('myposts', data);
     }
 
@@ -70,10 +70,46 @@ module.exports = (db) => {
         db.posts.editPosts(callback, postId, userId, titleInput, postInput);
 };
 
+
+    let selectDeletePostsControllerCallback = (request, response) => {
+        let userId = request.cookies.user_id;
+        let postId = request.params.id;
+
+        const callback = (error, posts) => {
+
+            const data = {
+                selectedPost : posts
+            }
+
+            response.render('myposts', data);
+    }
+        db.posts.selectEditPosts(callback, postId, userId);
+};
+
+
+
+    let deletePostsControllerCallback = (request, response) => {
+        let userId = request.cookies.user_id;
+        let postId = request.params.id;
+
+        const callback = (error, posts) => {
+
+            const data = {
+                myPosts : posts
+            }
+            response.redirect('/myposts/:id');
+    }
+
+        db.posts.deletePosts(callback, postId, userId);
+};
+
+
         return {
         createNew : createNewControllerCallback,
         displayPosts : displayPostsControllerCallback,
         selectEditPosts : selectEditPostsControllerCallback,
-        editPosts : editPostsControllerCallback
+        editPosts : editPostsControllerCallback,
+        selectDeletePosts : selectDeletePostsControllerCallback,
+        deletePosts : deletePostsControllerCallback
     }
 };

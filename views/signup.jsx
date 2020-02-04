@@ -16,11 +16,11 @@ class SignUp extends React.Component {
                 <body>
                 <div className="container">
                 <NavBar/>
-                  <div><h1 class="title">Sign Up</h1><br></br>
-                  <form class="signup-form" action="/hello" method="POST">
-                    <h2>Username:&nbsp;<input type="text" name="username" placeholder="Username"></input></h2>
-                    <h2>Password:&nbsp;<input type="text" name="password" placeholder="Password"></input></h2>
-                    <input class="signup" type="submit" value="Sign Up!"></input>
+                  <div><h1 className="title">Sign Up</h1><br></br>
+                  <form className="signup-form" action="/hello" method="POST">
+                    <h2>Username &nbsp; &nbsp;<input type="text" name="username" placeholder="Username"></input></h2>
+                    <h2>Password &nbsp; &nbsp;<input type="text" name="password" placeholder="Password"></input></h2>
+                    <input type="submit" value="Sign Up!"></input>
                   </form>
                   </div>
                 </div>

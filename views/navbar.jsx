@@ -15,10 +15,10 @@ class NavBar extends React.Component {
 
                 <body>
                     <nav>
-                      <div className="logo">laze</div>
-                      <a href="/login">log in</a>
-                      <a href="/signup">sign up</a>
-                      <a href="/recent">recent</a>
+                      <a href="/"><div className="logo">laze</div></a>
+                      <a href="/login" className="nav">log in</a>
+                      <a href="/signup" className="nav">sign up</a>
+                      <a href="/recent" className="nav">recent</a>
                     </nav>
                 </body>
 

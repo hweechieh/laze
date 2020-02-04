@@ -1,20 +1,25 @@
 var React = require('react');
 var NavBar = require('./navbar');
+var Buttons = require('./buttons')
 
 class MyPosts extends React.Component {
     render() {
 
         const allPosts = this.props.myPosts.map((post) => {
             let link = "/editpost/" + post.id;
+            let deleteLink = "/myposts" + post.id;
 
             return (
                 <div className="row">
-                    <div className="col"><div>{post.title}</div></div>
-                    <div className="col"><div>{post.post}</div></div>
+                    <div className="col"><div className="p-title">{post.title}</div></div>
+                    <div className="col"><div className="p-post">{post.post}</div></div>
+
                         <form action={link} method="GET">
                             <button value={post.id} type="submit">Edit</button>
                         </form>
-                    <button value={post.id} className="delete-btn" type="button">delete</button>
+                        <form action={deleteLink} method="POST">
+                            <button value={post.id} className="delete-btn" type="button">Delete</button>
+                        </form>
                 </div>
             )
         })
@@ -27,11 +32,14 @@ class MyPosts extends React.Component {
 
                 <body>
                     <NavBar/>
-                    <div className="myposts-title"><h1>My Posts</h1></div>
-                    <script src="/script.js"></script>
+                    <div className="greeting">My Posts</div>
+                    <Buttons/>
+                    <br></br>
+                    <br></br>
+
                 <div className="post-container">
                 <div className="row">
-                    <div className="col"><div className="col-inner">Post Title</div></div>
+                    <div className="col"><div className="col-inner">Title</div></div>
                     <div className="col"><div className="col-inner">Post</div></div>
                 </div>
                 {allPosts}

@@ -25,8 +25,12 @@ module.exports = (app, allModels) => {
 
     const createNewControllerCallbacks = require('./controllers/posts')(allModels);
     const displayPostsControllerCallbacks = require('./controllers/posts')(allModels);
+
     const selectEditPostsControllerCallbacks = require('./controllers/posts')(allModels);
     const editPostsControllerCallbacks = require('./controllers/posts')(allModels);
+
+    const selectDeletePostsControllerCallbacks = require('./controllers/posts')(allModels);
+    const deletePostsControllerCallbacks = require('./controllers/posts')(allModels);
 
 
 
@@ -41,9 +45,13 @@ module.exports = (app, allModels) => {
 
     app.get('/recent', recentPageControllerCallbacks.recentPage)
 
+    app.get('/createnew', createNewControllerCallbacks.createNew)
     app.post('/myposts', createNewControllerCallbacks.createNew)
     app.get('/myposts', displayPostsControllerCallbacks.displayPosts)
 
     app.get('/editpost/:id', selectEditPostsControllerCallbacks.selectEditPosts)
     app.post('/myposts/:id', editPostsControllerCallbacks.editPosts)
+
+    app.get('/myposts/:id', selectDeletePostsControllerCallbacks.selectDeletePosts)
+    app.delete('/myposts', deletePostsControllerCallbacks.deletePosts)
 };

@@ -17,9 +17,9 @@ class Landing extends React.Component {
                 <body>
                 <div className="landing-container">
                 <NavBar/>
-                  <div className="title"><p>Peace for everyone.</p></div>
+                  <div className="landing-title">Peace for everyone.</div>
                 </div>
-                <div class="enjoyfree-btn">
+                <div className="enjoyfree-btn">
                   <a href="/signup"><img src="./images/enjoyfree-btn.png" /></a>
                 </div>
                 </body>

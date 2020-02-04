@@ -17,9 +17,9 @@ class LogIn extends React.Component {
                 <div className="container">
                 <NavBar/>
                   <div><h1 className="title">Log In</h1><br></br>
-                  <form action="/welcomeback" method="POST">
-                    Username: <input type="text" name="username" placeholder="Username"></input><br></br>
-                    Password: <input type="text" name="password" placeholder="Password"></input><br></br>
+                  <form className="signup-form" action="/welcomeback" method="POST">
+                    <h2>Username &nbsp; &nbsp;<input type="text" name="username" placeholder="Username"></input></h2>
+                    <h2>Password &nbsp; &nbsp;<input type="text" name="password" placeholder="Password"></input></h2>
                     <input type="submit" value="Log In!"></input>
                   </form>
                   </div>

@@ -35,15 +35,12 @@ module.exports = (dbPoolInputInstance) => {
             let query = 'SELECT * FROM posts WHERE user_id=$1';
 
             dbPoolInputInstance.query(query, values, (error, queryResult) => {
-                if (error) {
 
-                    // invoke callback function with results after query has executed
+                if (queryResult.rows.length < 0) {
                     callback(error, null);
+                    return;
 
                 } else {
-                        // console.log(queryResult.rows);
-                    // invoke callback function with results after query has executed
-
                     if (queryResult.rows.length > 0) {
                         callback(null, queryResult.rows);
 
@@ -109,10 +106,65 @@ module.exports = (dbPoolInputInstance) => {
         }
 
 
+        let selectDeletePosts = (callback, postId, userId) => {
+
+            const values = [postId, userId];
+            let query = 'SELECT * FROM posts WHERE id=$1 AND user_id=$2;';
+
+            dbPoolInputInstance.query(query, values, (error, queryResult) => {
+                if (error) {
+
+                    // invoke callback function with results after query has executed
+                    callback(error, null);
+
+                } else {
+                        // console.log(queryResult.rows);
+                    // invoke callback function with results after query has executed
+
+                    if (queryResult.rows.length > 0) {
+                        callback(null, queryResult.rows);
+
+                    } else {
+                        callback(err, null);
+
+                    }
+                }
+            });
+        }
+
+
+        let deletePosts = (callback, postId, userId) => {
+
+            const values = [postId, userId];
+            let query = 'DELETE FROM posts WHERE id=$1 AND user_id=$2';
+
+            dbPoolInputInstance.query(query, values, (error, queryResult) => {
+                if (error) {
+
+                    // invoke callback function with results after query has executed
+                    callback(error, null);
+
+                } else {
+
+                    // invoke callback function with results after query has executed
+                    if (queryResult.rows.length > 0) {
+                        callback(null, queryResult.rows);
+
+                    } else {
+                        callback(null, null);
+
+                    }
+                }
+            });
+        }
+
+
             return {
                 createNew : createNew,
                 displayPosts : displayPosts,
                 selectEditPosts : selectEditPosts,
-                editPosts : editPosts
+                editPosts : editPosts,
+                selectDeletePosts : selectDeletePosts,
+                deletePosts : deletePosts
         };
     };

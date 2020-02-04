@@ -20,6 +20,19 @@ html {
     padding-left: 30px;
 }
 
+.nav {
+    font-family: montserrat, sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #837e93;
+    float: right;
+    padding: 20px;
+}
+
+.nav:hover {
+    font-weight: bold;
+}
+
 .btns-container {
     display: flex;
     width: 50%;
@@ -34,8 +47,18 @@ img {
 .enjoyfree-btn {
     width: 200px;
     height: auto;
-    display: block;
+    display: flex;
     margin: 0 auto;
+}
+
+.landing-title {
+    font-family: montserrat, sans-serif;
+    font-size: 36px;
+    font-weight: bolder;
+    color: #aca4ba;
+    text-align: center;
+    padding-top: 300px;
+    padding-bottom: 10px;
 }
 
 .title {
@@ -55,20 +78,34 @@ img {
 h2 {
     font-family: montserrat, sans-serif;
     font-size: 20px;
-    color: #44435d;
+    color: #57558c;
 }
 
-.signup {
-    background-image: url("./images/signup-btn.png");
-    width: 100px;
-    height: auto;
+input[type=text] {
+    font-family: montserrat, sans-serif;
+    font-size: 16px;
+    color: #5a5773;
+    border-radius: 10px;
+    padding: 10px;
+    outline: none;
+}
+
+input[type=submit] {
+    font-family: montserrat, sans-serif;
+    font-size: 18px;
+    background-color: #57558c;
+    color: white;
+    border-radius: 10px;
+    border: 1px white solid;
+    padding: 15px;
+    outline: none;
 }
 
 .greeting {
     font-family: montserrat, sans-serif;
     font-size: 30px;
     font-weight: bold;
-    color: #5a5773;
+    color: #aca4ba;
     text-align: center;
     padding-top: 80px;
     padding-left: 30px;
@@ -90,17 +127,16 @@ h2 {
     text-align: center;
 }
 
-a {
+textarea {
+    border-radius: 10px;
+    width: 70%;
+    height: 300px;
+    padding: 10px;
+    background-color: #f8f8f8;
+    resize: none;
+    outline: none;
+    font-size: 16px;
     font-family: montserrat, sans-serif;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #837e93;
-    float: right;
-    padding: 20px;
-}
-
-a:hover {
-    font-weight: bold;
 }
 
 .post-container {
@@ -116,6 +152,7 @@ a:hover {
 }
 
 .col {
+/*    padding-top: 20px;*/
     display: flex;
     flex-direction: col;
     flex-basis: 100%;
@@ -124,4 +161,21 @@ a:hover {
 
 .col-inner {
     text-align: center;
+    padding-top: 20px;
+    font-family: montserrat, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #837e93;
+}
+
+.p-title {
+    font-family: montserrat, sans-serif;
+    font-weight: bold;
+    color: #a5a1af;
+}
+
+.p-post {
+    font-family: montserrat, sans-serif;
+    color: #a5a1af;
+    padding-left: 45px;
 }

@@ -1,10 +1,12 @@
 var React = require('react');
 var NavBar = require('./navbar');
+var Buttons = require('./buttons')
 
 class EditPost extends React.Component {
     render() {
         // console.log('rendering');
         let link = "/myposts/" + this.props.selectedPost[0].id;
+
         return (
             <html>
                 <head>
@@ -13,21 +15,16 @@ class EditPost extends React.Component {
                 </head>
 
                 <body>
-                <div className="container">
                     <NavBar/>
                     <div className="greeting">Edit Post</div>
+                    <Buttons/>
                     <br></br>
-                    <script src="/script.js"></script>
-                </div>
+                    <br></br>
 
-                <form id="editPost" action={link} method="POST" >
-                    <div>
-                        <input type="text" name="title" value={this.props.selectedPost[0].title}></input>
-                    </div>
-                    <div>
-                        <textarea type="text" name="post" value={this.props.selectedPost[0].post}></textarea>
-                    </div>
-                    <button type="submit">Update!</button>
+                <form className="signup-form" action={link} method="POST">
+                    <input type="text" name="title" value={this.props.selectedPost[0].title}></input>
+                    <textarea type="text" name="post" value={this.props.selectedPost[0].post}></textarea>
+                    <input type="submit" value="Update!"></input>
                 </form>
 
                 </body>
