@@ -1,5 +1,6 @@
 var React = require('react');
-var NavBar = require('./navbar')
+var NavBar = require('./navbar');
+var Buttons = require('./buttons')
 
 class Landing extends React.Component {
 
@@ -16,9 +17,10 @@ class Landing extends React.Component {
                 <body>
                 <div className="landing-container">
                 <NavBar/>
-                  <div className="title"><p>Peace for everyone.</p>
-                  </div>
-                <script src="/signup.js"></script>
+                  <div className="title"><p>Peace for everyone.</p></div>
+                </div>
+                <div class="enjoyfree-btn">
+                  <a href="/signup"><img src="./images/enjoyfree-btn.png" /></a>
                 </div>
                 </body>
               </html>

@@ -15,7 +15,7 @@ class Greeting extends React.Component {
                 <body>
                 <div className="container">
                     <NavBar/>
-                    <div className="greeting">Hey! Nice to have you back!</div>
+                    <div className="greeting">Hey {this.props.loggedInUser[0].username}! Nice to have you back!</div>
                 <br></br>
                     <script src="/script.js"></script>
                 </div>

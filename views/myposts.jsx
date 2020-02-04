@@ -3,11 +3,18 @@ var NavBar = require('./navbar');
 
 class MyPosts extends React.Component {
     render() {
+
         const allPosts = this.props.myPosts.map((post) => {
+            let link = "/editpost/" + post.id;
+
             return (
                 <div className="row">
                     <div className="col"><div>{post.title}</div></div>
-                    <div className ="col"><div>{post.post}</div></div>
+                    <div className="col"><div>{post.post}</div></div>
+                        <form action={link} method="GET">
+                            <button value={post.id} type="submit">Edit</button>
+                        </form>
+                    <button value={post.id} className="delete-btn" type="button">delete</button>
                 </div>
             )
         })

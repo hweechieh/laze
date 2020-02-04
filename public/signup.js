@@ -14,13 +14,9 @@ document.body.appendChild(buttonDiv);
 //if element is an input, use the above to access the input
 
 buttonDiv.addEventListener('click', function(event) {
-    var request = new XMLHttpRequest();
 
     // what to do when we recieve the request
     var responseHandler = function() {
-        // console.log("response text", this.responseText);
-        // console.log("status text", this.statusText);
-        // console.log("status code", this.status);
 
     document.body.removeChild(buttonDiv);
 

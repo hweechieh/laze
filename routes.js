@@ -25,6 +25,8 @@ module.exports = (app, allModels) => {
 
     const createNewControllerCallbacks = require('./controllers/posts')(allModels);
     const displayPostsControllerCallbacks = require('./controllers/posts')(allModels);
+    const selectEditPostsControllerCallbacks = require('./controllers/posts')(allModels);
+    const editPostsControllerCallbacks = require('./controllers/posts')(allModels);
 
 
 
@@ -33,6 +35,7 @@ module.exports = (app, allModels) => {
 
     app.get('/login', logInPageControllerCallbacks.logInPage)
     app.post('/welcomeback', logInControllerCallbacks.logIn)
+    app.get('/welcomeback', logInControllerCallbacks.logIn)
 
     app.get('/signup', signUpPageControllerCallbacks.signUpPage)
 
@@ -40,4 +43,7 @@ module.exports = (app, allModels) => {
 
     app.post('/myposts', createNewControllerCallbacks.createNew)
     app.get('/myposts', displayPostsControllerCallbacks.displayPosts)
+
+    app.get('/editpost/:id', selectEditPostsControllerCallbacks.selectEditPosts)
+    app.post('/myposts/:id', editPostsControllerCallbacks.editPosts)
 };

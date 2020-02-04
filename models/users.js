@@ -32,7 +32,6 @@ module.exports = (dbPoolInputInstance) => {
 
     let query = ('SELECT * FROM users WHERE username=$1 AND password=$2');
 
-
     dbPoolInputInstance.query(query, values, (error, queryResult) => {
       if( error ){
 
