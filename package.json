@@ -1,0 +1,35 @@
+{
+  "name": "laze",
+  "version": "1.0.0",
+  "description": "Laze 🍃",
+  "main": "index.js",
+  "dependencies": {
+    "cookie-parser": "^1.4.4",
+    "express": "^4.17.1",
+    "express-react-views": "^0.11.0",
+    "laze": "^0.1.0",
+    "js-sha256": "^0.9.0",
+    "method-override": "^3.0.0",
+    "pg": "^7.18.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js"
+  },
+  "engines" : {
+    "node" : "^6.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hweechieh/laze.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hweechieh/laze/issues"
+  },
+  "homepage": "https://github.com/hweechieh/laze#readme"
+}
