@@ -7,7 +7,8 @@ class MyPosts extends React.Component {
 
         const allPosts = this.props.myPosts.map((post) => {
             let link = "/editpost/" + post.id;
-            let deleteLink = "/myposts" + post.id;
+            let deleteLink = "/myposts/" + post.id +"?_method=delete";
+            console.log(deleteLink);
 
             return (
                 <div className="row">
@@ -18,7 +19,7 @@ class MyPosts extends React.Component {
                             <button value={post.id} className="edit-btn" type="submit">Edit</button>
                         </form>
                         <form action={deleteLink} method="POST">
-                            <button value={post.id} className="delete-btn" type="button">Delete</button>
+                            <button value={post.id} className="delete-btn" type="submit">Delete</button>
                         </form>
                 </div>
             )

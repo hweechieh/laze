@@ -1,6 +1,5 @@
 var React = require('react');
 var NavBar = require('./navbar');
-var Buttons = require('./buttons')
 
 class EditPost extends React.Component {
     render() {
@@ -17,7 +16,11 @@ class EditPost extends React.Component {
                 <body>
                     <NavBar/>
                     <div className="greeting">Edit Post</div>
-                    <Buttons/>
+                    <div className="btns-container">
+                        <a href="/favorites"><img className="three-btns" src=".././images/faves-btn.png" /></a>
+                        <a href="/myposts"><img className="three-btns" src=".././images/viewallpost-btn.png" /></a>
+                        <a href="/createnew"><img className="three-btns" src=".././images/newpost-btn.png" /></a>
+                    </div>
                     <br></br>
                     <br></br>
 

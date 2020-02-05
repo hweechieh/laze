@@ -54,5 +54,5 @@ module.exports = (app, allModels) => {
     app.post('/myposts/:id', editPostsControllerCallbacks.editPosts)
 
     app.get('/myposts/:id', selectDeletePostsControllerCallbacks.selectDeletePosts)
-    app.delete('/myposts', deletePostsControllerCallbacks.deletePosts)
+    app.delete('/myposts/:id', deletePostsControllerCallbacks.deletePosts)
 };

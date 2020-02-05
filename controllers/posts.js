@@ -105,7 +105,7 @@ module.exports = (db) => {
             const data = {
                 myPosts : posts
             }
-            response.redirect('/myposts/:id');
+            response.redirect('/myposts');
     }
 
         db.posts.deletePosts(callback, postId, userId);
