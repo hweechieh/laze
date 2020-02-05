@@ -23,6 +23,7 @@ module.exports = (app, allModels) => {
 
     const recentPageControllerCallbacks = require('./controllers/videos')(allModels);
 
+    const createNewPageControllerCallbacks = require('./controllers/posts')(allModels);
     const createNewControllerCallbacks = require('./controllers/posts')(allModels);
     const displayPostsControllerCallbacks = require('./controllers/posts')(allModels);
 
@@ -45,7 +46,7 @@ module.exports = (app, allModels) => {
 
     app.get('/recent', recentPageControllerCallbacks.recentPage)
 
-    app.get('/createnew', createNewControllerCallbacks.createNew)
+    app.get('/createnew', createNewPageControllerCallbacks.createNewPage)
     app.post('/myposts', createNewControllerCallbacks.createNew)
     app.get('/myposts', displayPostsControllerCallbacks.displayPosts)
 

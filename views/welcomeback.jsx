@@ -14,13 +14,11 @@ class Greeting extends React.Component {
                 </head>
 
                 <body>
-                <div className="container">
                     <NavBar/>
                     <div className="greeting">Hey {this.props.loggedInUser[0].username}! Nice to have you back!</div>
+                <Buttons/>
                 <br></br>
-                    <Buttons/>
-                </div>
-
+                <br></br>
                 </body>
               </html>
         );

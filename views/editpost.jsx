@@ -23,7 +23,11 @@ class EditPost extends React.Component {
 
                 <form className="signup-form" action={link} method="POST">
                     <input type="text" name="title" value={this.props.selectedPost[0].title}></input>
+                        <br></br>
+                        <br></br>
                     <textarea type="text" name="post" value={this.props.selectedPost[0].post}></textarea>
+                        <br></br>
+                        <br></br>
                     <input type="submit" value="Update!"></input>
                 </form>
 

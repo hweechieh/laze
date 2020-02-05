@@ -4,6 +4,11 @@ const SALT = "donuts are fancy";
 module.exports = (db) => {
 
 
+    let createNewPageControllerCallback = (request, response) => {
+        response.render('createnew');
+};
+
+
     let createNewControllerCallback = (request, response) => {
         let userId = request.cookies.user_id;
         let titleInput = request.body.title;
@@ -15,10 +20,14 @@ module.exports = (db) => {
                 myPosts : posts
             }
 
-            response.render('createnew', data);
-    }
+            if (titleInput === null && postInput === null) {
+                response.send("Your post is empty, hence will not be saved.");
+            }
+                response.render('createnew', data);
+            }
         db.posts.createNew(callback, userId, titleInput, postInput);
-};
+    };
+
 
 
     let displayPostsControllerCallback = (request, response) => {
@@ -29,7 +38,6 @@ module.exports = (db) => {
             const data = {
                 myPosts : posts
             }
-
             response.render('myposts', data);
     }
 
@@ -105,11 +113,13 @@ module.exports = (db) => {
 
 
         return {
+        createNewPage : createNewPageControllerCallback,
         createNew : createNewControllerCallback,
         displayPosts : displayPostsControllerCallback,
         selectEditPosts : selectEditPostsControllerCallback,
         editPosts : editPostsControllerCallback,
         selectDeletePosts : selectDeletePostsControllerCallback,
         deletePosts : deletePostsControllerCallback
-    }
+    };
+
 };

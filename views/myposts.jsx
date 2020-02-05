@@ -15,7 +15,7 @@ class MyPosts extends React.Component {
                     <div className="col"><div className="p-post">{post.post}</div></div>
 
                         <form action={link} method="GET">
-                            <button value={post.id} type="submit">Edit</button>
+                            <button value={post.id} className="edit-btn" type="submit">Edit</button>
                         </form>
                         <form action={deleteLink} method="POST">
                             <button value={post.id} className="delete-btn" type="button">Delete</button>

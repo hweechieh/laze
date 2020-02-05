@@ -25,7 +25,7 @@ class CreateNew extends React.Component {
                         <textarea type="text" name="post" placeholder="My thoughts..."></textarea>
                         <br></br>
                         <br></br>
-                        <input href="/myposts" type="submit" value="Post!"></input>
+                        <input type="submit" value="Post!"></input>
                     </form>
 
                 </body>
