@@ -168,8 +168,9 @@ textarea {
 
 .col-inner {
     text-align: center;
-    padding-top: 20px;
+    padding-top: 10px;
     padding-left: 20px;
+    padding-bottom: 10px;
     font-family: montserrat, sans-serif;
     font-size: 20px;
     font-weight: bold;
@@ -181,9 +182,11 @@ textarea {
     font-weight: bold;
     color: #a5a1af;
     padding-left: 20px;
+    padding-top: 10px;
 }
 
 .p-post {
     font-family: montserrat, sans-serif;
     color: #a5a1af;
+    padding-top: 10px;
 }
